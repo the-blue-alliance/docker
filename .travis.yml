@@ -8,13 +8,3 @@ install:
 script:
   - ./validate-dockerfiles.sh
   - ./build-images.sh
-
-deploy:
-  provider: script
-  script: ./push-images.sh
-  on:
-    branch: master
-
-env:
-  global:
-  - COMMIT=${TRAVIS_COMMIT::8}
