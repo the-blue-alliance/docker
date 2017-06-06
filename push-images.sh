@@ -1,4 +1,5 @@
-#! /usr/bin/env sh
+#! /usr/bin/env bash
+set -e
 
 # Set Up docker
 docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
