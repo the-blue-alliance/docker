@@ -45,8 +45,8 @@ RUN npm install -g less
 RUN npm install -g uglifycss
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
-ADD the-blue-alliance/ the-blue-alliance-prod/
-WORKDIR the-blue-alliance-prod
+COPY the-blue-alliance/ the-blue-alliance-prod/
+WORKDIR /the-blue-alliance-prod
 
 # Get TBA dependencies
 RUN pip install -r requirements.txt
