@@ -9,7 +9,6 @@ for dir in $(ls -d */); do
     REPO=the-blue-alliance/${dir:0:-1}
     TAG=latest
     echo "Pushing $REPO:$TAG @ $COMMIT..."
-    docker build -f Dockerfile -t $REPO:$COMMIT .
     docker tag $REPO:$COMMIT $REPO:$TAG
     docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
     docker push $REPO

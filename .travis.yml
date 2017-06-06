@@ -7,10 +7,11 @@ install:
 
 script:
   - ./validate-dockerfiles.sh
+  - ./build-images.sh
 
 deploy:
   provider: script
-  script: push-images.sh
+  script: ./push-images.sh
   on:
     branch: master
 
