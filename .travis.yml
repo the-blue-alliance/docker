@@ -8,3 +8,4 @@ install:
 script:
   - ./validate-dockerfiles.sh
   - ./build-images.sh
+  - ./push-images.sh
