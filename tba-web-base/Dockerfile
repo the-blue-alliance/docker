@@ -33,6 +33,7 @@ RUN apt-get install -y \
   google-cloud-sdk \
   google-cloud-sdk-datastore-emulator \
   google-cloud-sdk-app-engine-python
+ENV PYTHONPATH "$PYTHONPATH:/usr/lib/google-cloud-sdk/platform/google_appengine"
 
 # Set up nvm and nodejs
 ENV NVM_DIR /nvm
